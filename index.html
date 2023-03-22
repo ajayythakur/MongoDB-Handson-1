@@ -361,7 +361,7 @@
   }
 ]</pre>
     </p>
-    <p>Ques 1. Delete all the documents from ""employee"" where last company is Y"</p>
+    <p>Ques 4. Delete all the documents from ""employee"" where last company is Y"</p>
     <p>Ans -  db.employee.deleteMany({lastCompany:"Y"})
         <pre>
             [
@@ -457,6 +457,16 @@
   }
 ]
         </pre>
+    </p>
+    <p>Ques 5. Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000.</p>
+    <p>Ans -  db.employee.updateMany({"salary":70000},{'$set':{"salary":65000}})
+      <pre>{
+        acknowledged: true,
+        insertedId: null,
+        matchedCount: 0,
+        modifiedCount: 0,
+        upsertedCount: 0
+      }</pre>
     </p>
 
 </body>
